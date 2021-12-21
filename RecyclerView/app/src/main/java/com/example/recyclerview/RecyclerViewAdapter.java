@@ -15,19 +15,19 @@ import java.util.List;
 class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
     List<Student> studentList;
-    Activity mAct;
+    Activity mainActivity;
 
-    public RecyclerViewAdapter(List<Student> List, Activity mAct) {
+    public RecyclerViewAdapter(List<Student> List, Activity mainActivity) {
         this.studentList = List;
-        this.mAct = mAct;
+        this.mainActivity = mainActivity;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
+        View item = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.student, parent, false);
-        return new MyViewHolder(itemView);
+        return new MyViewHolder(item);
     }
 
     @Override
@@ -51,12 +51,12 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
         TextView textViewRollno;
         TextView textViewGender;
         Student data;
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
-            imageViewStd = itemView.findViewById(R.id.imageView);
-            textViewRollno = itemView.findViewById(R.id.rollno);
-            textViewStdName = itemView.findViewById(R.id.name);
-            textViewGender = itemView.findViewById(R.id.gender);
+        public MyViewHolder(@NonNull View item) {
+            super(item);
+            imageViewStd = item.findViewById(R.id.imageView);
+            textViewRollno = item.findViewById(R.id.rollno);
+            textViewStdName = item.findViewById(R.id.name);
+            textViewGender = item.findViewById(R.id.gender);
         }
     }
 }
