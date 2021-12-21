@@ -4,7 +4,7 @@ public class Student {
     private String rollNo;
     private String name;
     private String gender;
-    private int  imageID;
+    private int imageID;
 
     public Student(String rollNo, String name, String gender, int imageID) {
         this.rollNo = rollNo;
