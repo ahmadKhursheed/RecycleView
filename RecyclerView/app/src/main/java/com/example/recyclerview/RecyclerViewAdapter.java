@@ -35,8 +35,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
         holder.data=studentList.get(position);
         holder.imageViewStd.setImageResource(holder.data.getImageID());
         holder.textViewStdName.setText(holder.data.getName());
-        holder.textViewRollno.setText(String.valueOf(holder.data.getRollNo()));
-        holder.textViewGender.setText(holder.data.getGender());
+        holder.textRollNoView.setText(String.valueOf(holder.data.getRollNo()));
+        holder.textGenderView.setText(holder.data.getGender());
 
     }
 
@@ -48,15 +48,15 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView imageViewStd;
         TextView textViewStdName;
-        TextView textViewRollno;
-        TextView textViewGender;
+        TextView textRollNoView;
+        TextView textGenderView;
         Student data;
         public MyViewHolder(@NonNull View item) {
             super(item);
             imageViewStd = item.findViewById(R.id.imageView);
-            textViewRollno = item.findViewById(R.id.rollno);
+            textRollNoView = item.findViewById(R.id.rollno);
             textViewStdName = item.findViewById(R.id.name);
-            textViewGender = item.findViewById(R.id.gender);
+            textGenderView = item.findViewById(R.id.gender);
         }
     }
 }
